@@ -2,20 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* globals.css */
+.container {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: center;
+  padding: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row; /* Switches to horizontal layout on larger screens */
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* globals.css */
+@media (max-width: 768px) {
+  .header {
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 0.5rem;
+  }
 }
